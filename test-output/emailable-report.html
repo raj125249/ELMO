@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">37,582</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.testFunctions.Financial_Endorsement</td><td><a href="#m0">tc_001</a></td><td rowspan="1">1758798113611</td><td rowspan="1">20172</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">org.testFunctions.Commercial_Login</td><td><a href="#m1">tc001</a></td><td rowspan="1">1758798097642</td><td rowspan="1">14367</td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">org.testFunctions.Financial_Endorsement#tc_001</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th><th>Parameter #12</th><th>Parameter #13</th><th>Parameter #14</th><th>Parameter #15</th><th>Parameter #16</th><th>Parameter #17</th><th>Parameter #18</th><th>Parameter #19</th><th>Parameter #20</th><th>Parameter #21</th><th>Parameter #22</th><th>Parameter #23</th><th>Parameter #24</th><th>Parameter #25</th><th>Parameter #26</th><th>Parameter #27</th><th>Parameter #28</th><th>Parameter #29</th><th>Parameter #30</th><th>Parameter #31</th><th>Parameter #32</th><th>Parameter #33</th><th>Parameter #34</th></tr><tr class="param stripe"><td>1</td><td>Policy No</td><td>SELECT * FROM (SELECT TPI_POLICY_NO FROM T_POL_INFO WHERE TPI_STATUS = &apos;A&apos; AND NOT EXISTS (SELECT 1 FROM Q_POL_INFO WHERE QPI_TRAN_TYPE=&apos;REN&apos; and QPI_OLD_POLICY_NO = TPI_POLICY_NO) 
+AND TPI_BDM_USER IS NULL AND (TPI_END_TYPE != &apos;008&apos; OR TPI_END_TYPE IS NULL) and TPI_POLICY_NO &lt;&gt; TPI_MGR_APPR_UID and (tpi_prod_code in(0102,0202,0302,0502)) ORDER BY DBMS_RANDOM.VALUE) WHERE ROWNUM = &apos;1&apos;;</td><td>TPI_POLICY_NO</td><td>Financial</td><td>Test</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Risk</td><td>Contract Number</td><td>Greenhouses</td><td>Malta</td><td>Specifically excluded</td><td>3000</td><td>700000.00</td><td>1.00</td><td>100000.00</td><td>1.00</td><td>150000.00</td><td>1.20</td><td>Yes</td><td>20.00</td><td>SELECT * FROM (SELECT DISTINCT CUST_CODE, CUST_NAME FROM M_CUSTOMER, M_CUSTOMER_MAP_LIST WHERE  
+CUST_CC_CODE = CML_CATG_ID and  CML_ID like &apos;FAC_OUT_CUST&apos; AND CUST_STS = &apos;A&apos; AND TRUNC (SYSDATE) 
+BETWEEN TRUNC (NVL (CUST_EFF_FM_DT, SYSDATE)) AND TRUNC (NVL (CUST_EFF_TO_DT, SYSDATE)) 
+ORDER BY dbms_random.value) WHERE ROWNUM=&apos;1&apos;</td><td>CUST_CODE</td><td>20.00</td><td>CASH</td><td>123455</td><td>HSBC Bank Malta plc</td><td>5647374643</td><td>BKARA-C/O ELMO INSURANCE LTD (suspense)</td><td>Y</td></tr><tr><th colspan="34">Exception</th></tr><tr><td colspan="34"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.all({By.xpath: //a[@title=&apos;Global Search&apos;]})&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at org.common.BasicFunctions.webDriverWait(BasicFunctions.java:313)
+	at org.testFunctions.Financial_Endorsement.tc_001(Financial_Endorsement.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.all({By.xpath: //a[@title=&apos;Global Search&apos;]})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.support.pagefactory.ByAll.findElement(ByAll.java:57)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	... 30 more
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.testFunctions.Commercial_Login#tc001</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>5</td><td>samueld</td><td>SELECT USER_NAME,PKG_USER_PASSWORD.FN_DECRYPT_PASSWORD (USER_ID) USER_PASSWORD FROM m_user where USER_ID = &apos;samueld&apos;</td><td>USER_PASSWORD</td><td>Y</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

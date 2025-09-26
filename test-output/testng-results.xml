@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="4" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-25T16:31:36 IST" name="Suite" finished-at="2025-09-25T16:32:13 IST" duration-ms="37582">
+    <groups>
+    </groups>
+    <test started-at="2025-09-25T16:31:36 IST" name="Test" finished-at="2025-09-25T16:32:13 IST" duration-ms="37582">
+      <class name="org.testFunctions.Financial_Endorsement">
+        <test-method signature="tc_001(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.testFunctions.Financial_Endorsement@147a5d08]" started-at="2025-09-25T16:31:53 IST" name="tc_001" data-provider="Financial_Endorsement" finished-at="2025-09-25T16:32:13 IST" duration-ms="20172" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Policy No]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT * FROM (SELECT TPI_POLICY_NO FROM T_POL_INFO WHERE TPI_STATUS = 'A' AND NOT EXISTS (SELECT 1 FROM Q_POL_INFO WHERE QPI_TRAN_TYPE='REN' and QPI_OLD_POLICY_NO = TPI_POLICY_NO) 
+AND TPI_BDM_USER IS NULL AND (TPI_END_TYPE != '008' OR TPI_END_TYPE IS NULL) and TPI_POLICY_NO <> TPI_MGR_APPR_UID and (tpi_prod_code in(0102,0202,0302,0502)) ORDER BY DBMS_RANDOM.VALUE) WHERE ROWNUM = '1';]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[TPI_POLICY_NO]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Financial]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Test]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Risk]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Contract Number]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[Greenhouses]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Malta]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[Specifically excluded]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[3000]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[700000.00]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[1.00]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[100000.00]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[1.00]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[150000.00]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[1.20]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[20.00]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[SELECT * FROM (SELECT DISTINCT CUST_CODE, CUST_NAME FROM M_CUSTOMER, M_CUSTOMER_MAP_LIST WHERE  
+CUST_CC_CODE = CML_CATG_ID and  CML_ID like 'FAC_OUT_CUST' AND CUST_STS = 'A' AND TRUNC (SYSDATE) 
+BETWEEN TRUNC (NVL (CUST_EFF_FM_DT, SYSDATE)) AND TRUNC (NVL (CUST_EFF_TO_DT, SYSDATE)) 
+ORDER BY dbms_random.value) WHERE ROWNUM='1']]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[CUST_CODE]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[20.00]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[CASH]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[123455]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[HSBC Bank Malta plc]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[5647374643]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[BKARA-C/O ELMO INSURANCE LTD (suspense)]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.all({By.xpath: //a[@title='Global Search']})' (tried for 10 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.all({By.xpath: //a[@title='Global Search']})' (tried for 10 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at org.common.BasicFunctions.webDriverWait(BasicFunctions.java:313)
+at org.testFunctions.Financial_Endorsement.tc_001(Financial_Endorsement.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.all({By.xpath: //a[@title='Global Search']})
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8.1'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.support.pagefactory.ByAll.findElement(ByAll.java:57)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy20.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+... 30 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_001 -->
+        <test-method is-config="true" signature="beforeEachTestMethod()[pri:0, instance:org.testFunctions.Financial_Endorsement@147a5d08]" started-at="2025-09-25T16:31:53 IST" name="beforeEachTestMethod" finished-at="2025-09-25T16:31:53 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTestMethod -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:org.testFunctions.Financial_Endorsement@147a5d08]" started-at="2025-09-25T16:32:13 IST" name="afterEachTestMethod" finished-at="2025-09-25T16:32:13 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_001 status=FAILURE method=Financial_Endorsement.tc_001(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.testFunctions.Financial_Endorsement@147a5d08] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+      </class> <!-- org.testFunctions.Financial_Endorsement -->
+      <class name="org.testFunctions.Commercial_Login">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:org.testFunctions.Commercial_Login@3c01cfa1]" started-at="2025-09-25T16:31:25 IST" name="initDriver" finished-at="2025-09-25T16:31:36 IST" duration-ms="11021" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method is-config="true" signature="beforeEachTestMethod()[pri:0, instance:org.testFunctions.Commercial_Login@3c01cfa1]" started-at="2025-09-25T16:31:37 IST" name="beforeEachTestMethod" finished-at="2025-09-25T16:31:37 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTestMethod -->
+        <test-method signature="tc001(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.testFunctions.Commercial_Login@3c01cfa1]" started-at="2025-09-25T16:31:37 IST" name="tc001" data-provider="Comm_UW_Login" finished-at="2025-09-25T16:31:52 IST" duration-ms="14367" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[samueld]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SELECT USER_NAME,PKG_USER_PASSWORD.FN_DECRYPT_PASSWORD (USER_ID) USER_PASSWORD FROM m_user where USER_ID = 'samueld']]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[USER_PASSWORD]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc001 -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:org.testFunctions.Commercial_Login@3c01cfa1]" started-at="2025-09-25T16:31:52 IST" name="afterEachTestMethod" finished-at="2025-09-25T16:31:52 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc001 status=SUCCESS method=Commercial_Login.tc001(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:org.testFunctions.Commercial_Login@3c01cfa1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.testFunctions.Commercial_Login@3c01cfa1]" started-at="2025-09-25T16:32:14 IST" name="tearDown" finished-at="2025-09-25T16:32:14 IST" duration-ms="188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.testFunctions.Commercial_Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
